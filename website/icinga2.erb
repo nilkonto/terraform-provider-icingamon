@@ -1,0 +1,35 @@
+<% wrap_layout :inner do %>
+  <% content_for :sidebar do %>
+    <div class="docs-sidebar hidden-print affix-top" role="complementary">
+      <ul class="nav docs-sidenav">
+        <li<%= sidebar_current("docs-home") %>>
+          <a href="/docs/providers/index.html">All Providers</a>
+        </li>
+
+        <li<%= sidebar_current("docs-icingamon-index") %>>
+          <a href="/docs/providers/icingamon/index.html">Icinga2 Provider</a>
+        </li>
+
+        <li<%= sidebar_current("docs-icingamon-resource") %>>
+          <a href="#">Resources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-icingamon-resource-checkcommand") %>>
+              <a href="/docs/providers/icingamon/r/checkcommands.html">icingamon_checkcommand</a>
+            </li>
+            <li<%= sidebar_current("docs-icingamon-resource-host") %>>
+              <a href="/docs/providers/icingamon/r/host.html">icingamon_host</a>
+            </li>
+            <li<%= sidebar_current("docs-icingamon-resource-hostgroup") %>>
+              <a href="/docs/providers/icingamon/r/hostgroup.html">icingamon_hostgroup</a>
+            </li>
+            <li<%= sidebar_current("docs-icingamon-resource-continuous_query") %>>
+              <a href="/docs/providers/icingamon/r/service.html">icingamon_service</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= yield %>
+<% end %>
