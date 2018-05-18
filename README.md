@@ -16,10 +16,10 @@ Requirements
 Building The Provider
 ---------------------
 
-Clone repository to: `$GOPATH/src/github.com/hashicorp/terraform-provider-$PROVIDER_NAME`
+Clone repository to: `$GOPATH/src/github.com/nilkonto/terraform-provider-$PROVIDER_NAME`
 
 ```sh
-$ mkdir -p $GOPATH/src/github.com/hashicorp; cd $GOPATH/src/github.com/hashicorp
+$ mkdir -p $GOPATH/src/github.com/nilkonto; cd $GOPATH/src/github.com/nilkonto
 $ git clone git@github.com:hashicorp/terraform-provider-$PROVIDER_NAME
 ```
 
