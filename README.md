@@ -26,7 +26,7 @@ $ git clone git@github.com:hashicorp/terraform-provider-$PROVIDER_NAME
 Enter the provider directory and build the provider
 
 ```sh
-$ cd $GOPATH/src/github.com/hashicorp/terraform-provider-$PROVIDER_NAME
+$ cd $GOPATH/src/github.com/nilkonto/terraform-provider-$PROVIDER_NAME
 $ make build
 ```
 
