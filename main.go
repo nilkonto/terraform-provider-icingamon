@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform/plugin"
-	"github.com/terraform-providers/terraform-provider-icingamon/icingamon"
+	"github.com/nilkonto/terraform-provider-icingamon/icingamon"
 )
 
 func main() {
