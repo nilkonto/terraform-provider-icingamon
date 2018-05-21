@@ -635,5 +635,5 @@
 			"versionExact": "v1.6.1"
 		}
 	],
-	"rootPath": "github.com/terraform-providers/terraform-provider-icingamon"
+	"rootPath": "github.com/nilkonto/terraform-provider-icingamon"
 }
