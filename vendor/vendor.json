@@ -515,10 +515,9 @@
 			"revisionTime": "2016-08-03T19:07:31Z"
 		},
 		{
-			"checksumSHA1": "5vT6l22kAQVXWOT1YI5bhLQ9kBA=",
 			"path": "github.com/nilkonto/icingamon/iapi",
-			"revision": "7b46d425cc71344e4357bf0bcc873e93723d1dc7",
-			"revisionTime": "2017-07-26T19:48:34Z"
+			"version": "v1.0",
+			"versionExact": "v1.0"
 		},
 		{
 			"checksumSHA1": "guxbLo8KHHBeM0rzou4OTzzpDNs=",
