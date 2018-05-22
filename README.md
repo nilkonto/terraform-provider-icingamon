@@ -16,17 +16,17 @@ Requirements
 Building The Provider
 ---------------------
 
-Clone repository to: `$GOPATH/src/github.com/nilkonto/terraform-provider-$PROVIDER_NAME`
+Clone repository to: `$GOPATH/src/github.com/nilkonto/terraform-provider-icingamon`
 
 ```sh
 $ mkdir -p $GOPATH/src/github.com/nilkonto; cd $GOPATH/src/github.com/nilkonto
-$ git clone git@github.com:nilkonto/terraform-provider-$PROVIDER_NAME
+$ git clone git@github.com:nilkonto/terraform-provider-icingamon
 ```
 
 Enter the provider directory and build the provider
 
 ```sh
-$ cd $GOPATH/src/github.com/nilkonto/terraform-provider-$PROVIDER_NAME
+$ cd $GOPATH/src/github.com/nilkonto/terraform-provider-icingamon
 $ make build
 ```
 
