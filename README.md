@@ -32,7 +32,15 @@ $ make build
 
 Using the provider
 ----------------------
-## Fill in for each provider
+
+At present Terraform can automatically install only the providers distributed by HashiCorp. Third-party providers can be manually installed by placing their plugin executables in one of the following locations depending on the host operating system:
+
+- On Windows, in the sub-path terraform.d/plugins beneath your user's "Application Data" directory.
+- On all other systems, in the sub-path .terraform.d/plugins in your user's home directory.
+terraform init will search this directory for additional plugins during plugin initialization.
+
+The naming scheme for provider plugins is terraform-provider-NAME_vX.Y.Z, and Terraform uses the name to understand the name and version of a particular provider binary. Third-party plugins will often be distributed with an appropriate filename already set in the distribution archive so that it can be extracted directly into the plugin directory described above.
+
 
 Developing the Provider
 ---------------------------
