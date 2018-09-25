@@ -9,6 +9,45 @@ duplicate or near duplicate defintions of structs are being defined but can be r
 be in place to ensure everything still works.
 */
 
+// AWShostAttrs ...
+type AWShostAttrs struct {
+	Address      string            `json:"address,omitempty"`
+	CheckCommand string            `json:"check_command,omitempty"`
+	DisplayName  string            `json:"display_name,omitempty"`
+	Zone         string            `json:"zone,omitempty"`
+	Vars         map[string]string `json:"vars,omitempty"`
+}
+
+// AWShostStruct ...
+type AWShostStruct struct {
+	Templates []string          `json:"templates,omitempty"`
+	Attrs     map[string]string `json:"attrs,omitempty"`
+}
+
+// AWSasgDetails ...
+type AWSasgDetails struct {
+	Description string `json:"Description,omitempty"`
+	Details     struct {
+		SubnetID         string `json:"Subnet ID,omitempty"`
+		AvailabilityZone string `json:"Availability Zone,omitempty"`
+	} `json:"Details,omitempty"`
+	EndTime              string `json:"EndTime,omitempty"`
+	RequestID            string `json:"RequestId,omitempty"`
+	ActivityID           string `json:"ActivityId,omitempty"`
+	Cause                string `json:"Cause,omitempty"`
+	AutoScalingGroupName string `json:"AutoScalingGroupName,omitempty"`
+	StartTime            string `json:"StartTime,omitempty"`
+	EC2InstanceID        string `json:"EC2InstanceId,omitempty"`
+	StatusCode           string `json:"StatusCode,omitempty"`
+	StatusMessage        string `json:"StatusMessage,omitempty"`
+}
+
+// AWSec2Details ...
+type AWSec2Details struct {
+	InstanceID string `json:"instance-id,omitempty"`
+	State      string `json:"state,omitempty"`
+}
+
 //ServiceStruct stores service results
 type ServiceStruct struct {
 	Attrs ServiceAttrs `json:"attrs"`
@@ -79,6 +118,17 @@ type HostStruct struct {
 	Joins struct{}               `json:"stuct,omitempty"`
 }
 
+// HostStructRead is a struct used to store results from an Icinga2 Host API Call. The content are also used to generate the JSON for the CreateHost call
+type HostStructRead struct {
+	Templates []string  `json:"templates,omitempty"`
+	Name      string    `json:"name,omitempty"`
+	Type      string    `json:"type,omitempty"`
+	Attrs     HostAttrs `json:"attrs,omitempty"`
+	//Attrs map[string]interface{} `json:"attrs,omitempty"`
+	Meta  struct{} `json:"meta,omitempty"`
+	Joins struct{} `json:"stuct,omitempty"`
+}
+
 // HostAttrs This is struct lists the attributes that can be set during a CreateHost call. The contents of the struct is converted into JSON
 type HostAttrs struct {
 	ActionURL    string      `json:"action_url,omitempty"`
@@ -100,6 +150,21 @@ type APIResult struct {
 	Status      string      `json:"Status"`
 	Code        int         `json:"Code"`
 	Results     interface{} `json:"results"`
+}
+
+// FilteredHostResults ...
+type FilteredHostResults struct {
+	Results []struct {
+		Attrs struct {
+			Name string `json:"name"`
+		} `json:"attrs"`
+		Joins struct {
+		} `json:"joins"`
+		Meta struct {
+		} `json:"meta"`
+		Name string `json:"name"`
+		Type string `json:"type"`
+	} `json:"results"`
 }
 
 // APIStatus stores the results of an Icinga2 API Status Call
